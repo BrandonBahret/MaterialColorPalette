@@ -17,8 +17,8 @@ import com.example.brandon.materialcolorpalette.R;
 
 public class MaterialColorViewHolder extends RecyclerView.ViewHolder {
 
-    TextView mTitle;
-    TextView mColorText;
+    private TextView mTitle;
+    private TextView mColorText;
 
     public MaterialColorViewHolder(View itemView) {
         super(itemView);
@@ -30,14 +30,15 @@ public class MaterialColorViewHolder extends RecyclerView.ViewHolder {
         mTitle.setText(materialColor.getTitle());
         mColorText.setText(materialColor.getColor());
 
-        int defaultColor = materialColor.getColorAsInteger();
-        itemView.getBackground().setColorFilter(defaultColor, PorterDuff.Mode.SRC);
+        int color = materialColor.getColorAsInteger();
+        itemView.getBackground().setColorFilter(color, PorterDuff.Mode.SRC);
 
-        if (MyColorUtils.shouldUseDarkForegroundColor(defaultColor)) {
-            int textColor = ContextCompat.getColor(mTitle.getContext(), R.color.textColor2);
-            mTitle.setTextColor(textColor);
-            mColorText.setTextColor(textColor);
-        }
+        int textColor = MyColorUtils.shouldUseDarkForegroundColor(color) ?
+                ContextCompat.getColor(mTitle.getContext(), R.color.textColor2):
+                ContextCompat.getColor(mTitle.getContext(), R.color.textColor3);
+
+        mTitle.setTextColor(textColor);
+        mColorText.setTextColor(textColor);
     }
 
 }

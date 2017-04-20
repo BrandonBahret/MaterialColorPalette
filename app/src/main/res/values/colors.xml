@@ -12,5 +12,6 @@
     <!-- Text Colors -->
     <color name="textColor1">#797979</color>
     <color name="textColor2">#313131</color>
+    <color name="textColor3">#fafafa</color>
 
 </resources>

@@ -25,4 +25,5 @@ public class MaterialPalette {
     public MaterialSwatch get(int position) {
         return swatches.get(position);
     }
+
 }

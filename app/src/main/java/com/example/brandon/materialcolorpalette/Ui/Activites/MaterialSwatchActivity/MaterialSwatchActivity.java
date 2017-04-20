@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -16,6 +15,8 @@ import android.view.MenuItem;
 import com.example.brandon.materialcolorpalette.Common.MyColorUtils;
 import com.example.brandon.materialcolorpalette.Data.MaterialSwatch;
 import com.example.brandon.materialcolorpalette.R;
+
+import static com.example.brandon.materialcolorpalette.R.id.toolbar;
 
 public class MaterialSwatchActivity extends AppCompatActivity {
 
@@ -36,7 +37,7 @@ public class MaterialSwatchActivity extends AppCompatActivity {
 
         mSwatch = (MaterialSwatch) getIntent().getSerializableExtra(KEY_SWATCH);
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mToolbar = (Toolbar) findViewById(toolbar);
         mRecyclerView = (RecyclerView) findViewById(R.id.swatch_container);
 
         setSupportActionBar(mToolbar);
@@ -61,11 +62,6 @@ public class MaterialSwatchActivity extends AppCompatActivity {
             int darkerColor = MyColorUtils.darkenColorBy(defaultColor, 0.15f);
             getWindow().setStatusBarColor(darkerColor);
             actionBar.setBackgroundDrawable(new ColorDrawable(defaultColor));
-
-            if (MyColorUtils.shouldUseDarkForegroundColor(defaultColor)) {
-                mToolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.textColor2));
-                setSupportActionBar(mToolbar);
-            }
 
             actionBar.setDisplayHomeAsUpEnabled(true);
         }

@@ -25,4 +25,5 @@ public class MaterialSwatch implements Serializable {
     public MaterialColor getDefaultColor() {
         return defaultColor;
     }
+
 }

@@ -15,7 +15,7 @@ public class MyColorUtils {
      * @return True if the color's lightness is greater than some threshold.
      */
     public static boolean shouldUseDarkForegroundColor(int backgroundColor) {
-        return getLightness(backgroundColor) > 0.5f;
+        return getLuminance(backgroundColor) > 0.4f;
     }
 
 
