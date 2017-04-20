@@ -20,16 +20,21 @@
     </style>
 
     <!--Layout Styles-->
-    <style name="MaterialColorViewText">
+    <style name="Text">
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:textSize">30sp</item>
         <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:shadowRadius">5</item>
+        <item name="android:shadowColor">#2d000000</item>
+        <item name="android:shadowDx">-2</item>
+        <item name="android:shadowDy">3</item>
     </style>
 
-    <style name="MaterialSwatchLauncherViewText">
-        <item name="android:textColor">@android:color/white</item>
+    <style name="Text.MaterialColorView">
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="Text.MaterialSwatchLauncherView">
         <item name="android:textSize">25sp</item>
-        <item name="android:fontFamily">sans-serif-condensed</item>
     </style>
 
 </resources>
