@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.brandon.materialcolorpalette.Ui.Activites.AboutActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="55dp"
+        android:contentDescription="@string/icon_description"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/appTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/imageView"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.461"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="32dp"
+        android:layout_weight="1"
+        android:text="@string/app_description"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/textColor1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/whereToFindMeText"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/imageView"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintHorizontal_bias="0.5"/>
+
+    <TextView
+        android:id="@+id/whereToFindMeText"
+        android:layout_width="0dp"
+        android:layout_height="15dp"
+        android:layout_above="@+id/link_layout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/background_simple_line"
+        android:text="@string/where_to_find_the_author"
+        android:textAlignment="center"
+        android:textColor="@color/textColor1"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/link_layout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/link_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"/>
+
+        <ImageButton
+            android:id="@+id/about_github"
+            android:layout_width="@dimen/link_button_size"
+            android:layout_height="@dimen/link_button_size"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/link_to_authors_github_account"
+            android:onClick="linkButtonClicked"
+            android:padding="4dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_github"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/about_linkedin"
+            android:layout_width="@dimen/link_button_size"
+            android:layout_height="@dimen/link_button_size"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/link_to_the_authors_linkedin_account"
+            android:onClick="linkButtonClicked"
+            android:padding="4dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_linkedin"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/about_freelancer"
+            android:layout_width="@dimen/link_button_size"
+            android:layout_height="@dimen/link_button_size"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/link_to_the_authors_freelancer_com_account"
+            android:onClick="linkButtonClicked"
+            android:padding="4dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_freelancer_24dp"
+            android:tint="#6dc0e6"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

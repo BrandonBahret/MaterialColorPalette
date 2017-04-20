@@ -1,0 +1,18 @@
+<resources>
+
+    <string name="app_name">Color Palette</string>
+    <string name="value_placeholder">value</string>
+
+    <!--Menu Strings-->
+    <string name="menu_about">About</string>
+    <string name="menu_attributions">Attributions</string>
+
+    <!--About Activity Strings-->
+    <string name="where_to_find_the_author">Where to find the author.</string>
+    <string name="link_to_authors_github_account">Link to author\'s Github account.</string>
+    <string name="link_to_the_authors_linkedin_account">Link to the author\'s LinkedIn account.</string>
+    <string name="link_to_the_authors_freelancer_com_account">Link to the author\'s freelancer.com account.</string>
+    <string name="app_description">This is a simple app to explore the material color palette as defined by Google.</string>
+    <string name="icon_description">Image of the app icon.</string>
+
+</resources>
